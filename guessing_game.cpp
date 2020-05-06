@@ -3,20 +3,22 @@
 #include <cstdlib>
 #include <ctime>
 #include <vector>
+#include <array>
 
-void print_vector(std::vector<int> vector)
+
+void print_array(std::array<int, 251> array, int size)
 {
-	for (int i = 0; i < vector.size(); i++)
+	for (int i = 0; i < size; i++)
 	{
-		std::cout << vector[i] << "\t";
+		std::cout << array[i] << "\t";
 	}
 	std::cout << "\n";
 }
 
 void play_game()
 {
-	std::vector<int> guesses;
-
+	std::array<int, 251> guesses;
+	int count = 0;
 
 	int random = rand() % 251;
 	std::cout << random << std::endl;
@@ -26,7 +28,7 @@ void play_game()
 		int guess;
 		std::cin >> guess;
 
-		guesses.push_back(guess);
+		guesses[count++] = guess;
 
 		if (guess == random)
 		{
@@ -42,7 +44,7 @@ void play_game()
 			std::cout << "Too high\n";
 		}
 	}
-	print_vector(guesses);
+	print_array(guesses, count);
 }
 
 
