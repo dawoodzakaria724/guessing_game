@@ -1,3 +1,4 @@
 ﻿  guessing_game.cpp
+c:\users\dawoo\onedrive\desktop\github repositories\guessing_game\guessing_game.cpp(11): warning C4018: '<': signed/unsigned mismatch
 c:\users\dawoo\onedrive\desktop\github repositories\guessing_game\guessing_game.cpp(53): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   guessing_game.vcxproj -> C:\Users\dawoo\OneDrive\Desktop\GitHub Repositories\guessing_game\Debug\guessing_game.exe
