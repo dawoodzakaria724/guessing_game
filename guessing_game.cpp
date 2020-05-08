@@ -6,18 +6,18 @@
 #include <array>
 
 
-void print_array(std::array<int, 251> array, int size)
+void print_vector(std::vector<int> vector)
 {
-	for (int i = 0; i < size; i++)
+	for (int i = 0; i < vector.size(); i++)
 	{
-		std::cout << array[i] << "\t";
+		std::cout << vector[i] << "\t";
 	}
 	std::cout << "\n";
 }
 
 void play_game()
 {
-	std::array<int, 251> guesses;
+	std::vector<int> guesses;
 	int count = 0;
 
 	int random = rand() % 251;
@@ -28,7 +28,7 @@ void play_game()
 		int guess;
 		std::cin >> guess;
 
-		guesses[count++] = guess;
+		guesses.push_back(guess);
 
 		if (guess == random)
 		{
@@ -44,7 +44,7 @@ void play_game()
 			std::cout << "Too high\n";
 		}
 	}
-	print_array(guesses, count);
+	print_vector(guesses);
 }
 
 
